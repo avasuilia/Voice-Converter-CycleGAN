@@ -5,7 +5,7 @@ import time
 import librosa
 
 from preprocess import *
-from model import CycleGAN
+from model import StarGANV2
 
 
 def train(train_A_dir, train_B_dir, model_dir, model_name, random_seed, validation_A_dir, validation_B_dir, output_dir, tensorboard_log_dir):
@@ -73,7 +73,7 @@ def train(train_A_dir, train_B_dir, model_dir, model_name, random_seed, validati
 
     print('Time Elapsed for Data Preprocessing: %02d:%02d:%02d' % (time_elapsed // 3600, (time_elapsed % 3600 // 60), (time_elapsed % 60 // 1)))
 
-    model = CycleGAN(num_features = num_mcep)
+    model = StarGANV2(num_features = num_mcep)
 
     for epoch in range(num_epochs):
         print('Epoch: %d' % epoch)

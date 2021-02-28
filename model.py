@@ -4,7 +4,7 @@ from module import discriminator, generator_gatedcnn
 from utils import l1_loss, l2_loss, cross_entropy_loss
 from datetime import datetime
 
-class CycleGAN(object):
+class StarGANV2(object):
 
     def __init__(self, num_features, discriminator = discriminator, generator = generator_gatedcnn, mode = 'train', log_dir = './log'):
 
